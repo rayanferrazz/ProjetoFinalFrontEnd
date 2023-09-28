@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html id="html" lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+  <link rel="stylesheet" href="assets/css/style.css">
+  <link rel="shortcut icon" type="imagex/png" href="./assets/scr/icN.ico">
+  <title>Login | Novoflix</title>
+</head>
+
+<body id="body">
+  <header>
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid nav-container">
+        <a class="navbar-brand titulo-pricipal" href="./index.html">Novoflix</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+          aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a class="nav-link" id="home" aria-current="page" href="./index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Quem Somos</a>
+            </li>
+          </ul>
+        </div>
+        <a href="./login.html"><img src="./assets/scr/login.png" class="imagem-login" alt=""></a>
+        <div class="nav-item-flex">
+
+          <p id="alterar">Change to Dark Mode:</p>
+          <input onclick="alterarModo()" type="checkbox" id="check" />
+          <label for="check" class="switch"><span class="slider"></span></label>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <section id="form-login">
+      <div class="form-login-flex">
+        <form class="card-login" id="card-login">
+          <h1 class="titulo-principal">Entrar com uma conta Novoflix</h1>
+          <label for="login" class="label">Email</label>
+          <input type="email" id="login" class="entrada">
+          <div class="senha-flex">
+            <label for="senha" class="label">Senha</label>
+            <a href="#" class="recuperar-senha">Esqueceu a senha?</a>
+          </div>
+          <input type="password" id="senha" class="entrada">
+          <input type="submit" id="entrar" value="Entrar" >
+          <div class="card-outros">
+            <p class="info-outros">
+              Primeira vez no Novoflix?
+              <a class="link" href="./assinaturas.html"> Crie sua conta</a>
+            </p>
+          </div>
+        </form>
+        <p id="error" style="color: red;"></p>
+      </div>
+    </section>
+
+    <a class="back-to-top"></a>
+  </main>
+  <footer>
+    <div class="contato">
+      <div class="contato-titulo">
+        <p class="contatos-texto-titulo">Contatos</p>
+      </div>
+      <div class="contatos-infos">
+        <a href="https://www.linkedin.com/company/serratecoficial/" target="_blank" class="link-contato"><img
+            src="./assets/scr/linkedin-icon.png" alt=""></a>
+        <a href="https://www.instagram.com/serratecoficial/" target="_blank" class="link-contato"><img
+            src="./assets/scr/insta-icon.png" alt=""></a>
+        <a href="https://www.facebook.com/serratecoficial" target="_blank" class="link-contato"><img
+            src="./assets/scr/facebook-icon.png" alt=""></a>
+        <a href="https://twitter.com/serratecoficial" target="_blank" class="link-contato"><img
+            src="./assets/scr/twitter-icon.png" alt=""></a>
+        <a href="https://www.youtube.com/@SerratecOficial" target="_blank" class="link-contato"><img
+            src="./assets/scr/youtube-icon.png" alt=""></a>
+      </div>
+    </div>
+
+
+    <div class="plataformas">
+      <p class="disponibilidade">Disponível em:</p>
+      <div class="dispositivos">
+        <img src="./assets/scr/celular_N.png" alt="">
+        <img src="./assets/scr/TV_N.png" alt="">
+        <img src="./assets/scr/Tablet_N.png" alt="">
+        <img src="./assets/scr/Game_N.png" alt="">
+      </div>
+    </div>
+
+
+  </footer>
+  <script src="assets/js/darkMode.js"></script>
+  <script src="assets/js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+  <script src="assets/js/back-to-top.js"></script>
+  <script>
+    const loginForm = document.getElementById("card-login");
+    const errorElement = document.getElementById("error");
+
+    loginForm.addEventListener("submit", function (e) {
+      e.preventDefault(); 
+
+      const username = document.getElementById("login").value;
+      const password = document.getElementById("senha").value;
+
+      if (username === "grupo1@gmail.com" && password === "grupo1") {
+        window.location.href = './index.html';
+      } else 
+      if(username === "bernardo@serratec.org" && password === "playboyzinho"){
+        alert("Bem-vindo Senhor Stark");
+        window.location.href = './index.html';
+      }else{
+        errorElement.textContent = "Credenciais inválidas. Tente novamente.";
+      }
+    });
+
+
+
+  </script>
+</body>
+
+</html>
+</body>
+
+</html>

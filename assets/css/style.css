@@ -1,0 +1,640 @@
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Oswald:wght@700&display=swap");
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: #ff793f;
+  border-radius: 30px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #292929;
+  border-radius: 30px;
+}
+
+/* Fim do Scrollbar */
+
+/* Variáveis */
+:root {
+  --font-titulo: "Bebas Neue", sans-serif;
+  --cor-primaria: #ff793f;
+  --cor-secundaria: #cbd2d4;
+  --cor-letra: #000000;
+  --cor-form: #ffffff;
+  --entrada-de-dados: #ffffff;
+}
+
+.dark-mode:root {
+  --font-titulo: "Bebas Neue", sans-serif;
+  --cor-primaria: #ff793f;
+  --cor-secundaria: #000000;
+  --backgraund-cor: #464646;
+  --cor-letra: #ffffff;
+  --cor-form: #ffffff;
+  --entrada-de-dados: #d2cdcd;
+}
+
+/* Fim das Variáveis */
+
+/* Css Reset */
+
+* {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, sans-serif;
+}
+
+/* Fim do reset */
+
+body {
+  background-color: var(--backgraund-cor);
+}
+
+/* Header */
+
+.titulo-pricipal {
+  font-size: 48px;
+  color: var(--cor-primaria);
+  font-family: var(--font-titulo);
+  font-weight: 700;
+}
+
+.titulo-pricipal:hover {
+  color: var(--cor-primaria);
+}
+
+.cadastro {
+  padding: 50px;
+  padding-top: 8%;
+}
+
+.linha {
+  margin: 20px 0;
+}
+
+.label {
+  color: var(--cor-letra);
+}
+
+.link-link {
+  color: var(--cor-primaria);
+}
+
+.botao-cadastrar-div {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+}
+
+.botao-cadastrar {
+  margin: 0 138px;
+  padding-top: 0;
+  padding: 8px;
+  background-color: var(--cor-primaria);
+  border-radius: 5px;
+  height: 40px;
+  color: #ffffff;
+  border: none;
+}
+
+.pergunta-login-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  padding-bottom: 180px;
+}
+
+.pergunta-login {
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+  width: auto;
+  align-items: center;
+  padding: 10px 20px;
+
+  margin: 30px 0;
+}
+
+.nav {
+  --bs-bg-opacity: none;
+}
+
+.nav-link {
+  display: block;
+  padding: var(--bs-nav-link-padding-y) var(--bs-nav-link-padding-x);
+  font-size: 20px;
+  font-weight: var(--bs-nav-link-font-weight);
+  color: var(--cor-letra);
+  text-decoration: none;
+  background: 0 0;
+  border: 0;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out;
+}
+
+.nav-link:hover {
+  color: #fff;
+}
+
+.nav-container {
+  padding: 0 50px;
+}
+
+.navbar {
+  position: fixed;
+  background-color: var(--cor-secundaria);
+  width: 100%;
+  z-index: 10;
+  padding: 0 0;
+}
+
+.nav-item-flex {
+  display: flex;
+  flex-direction: row;
+  padding-top: 9px;
+  font-size: 20px;
+
+  color: var(--cor-letra);
+}
+
+.navbar-toggler-icon {
+  background-image: url("../scr/hamburger-icon.png");
+}
+
+.imagem-login {
+  margin-right: 20px;
+  height: 42px;
+}
+/* Fim do Header */
+
+/* Carousel */
+
+.carousel-item {
+  padding: 40px 50px 0 50px;
+}
+
+.imagem-backgraund {
+  background-color: #000000;
+  border-radius: 8px;
+}
+
+.carousel-image {
+  height: 500px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.carousel-image {
+  opacity: 0.7;
+}
+
+.carousel-control-prev-icon {
+  background-image: url(../scr/seta-esquerda.png);
+}
+
+.carousel-control-next-icon {
+  background-image: url(../scr/seta-direita.png);
+}
+
+.titulo-informacao {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.informacao {
+  font-size: 25px;
+  font-weight: 400;
+}
+
+/* Fim do Carousel */
+
+/* LISTA DE FILMES E SERIES */
+
+main {
+  padding-top: 50px;
+}
+
+form {
+  margin: 10px 50px;
+  padding: 10px;
+  border: 2px solid var(--cor-primaria);
+  border-radius: 20px;
+  background-color: var(--cor-form);
+  display: flex;
+  background-color: var(--entrada-de-dados);
+}
+
+input#pesquisa {
+  padding: 5px;
+  border: none;
+  outline: none;
+  flex: 1;
+  background-color: var(--entrada-de-dados);
+}
+
+#botao-form {
+  background-color: var(--cor-primaria);
+  border: none;
+}
+
+#botao-form:hover {
+  background-color: var(--cor-primaria);
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 15px 0;
+}
+
+.lista {
+  padding: 10px 50px;
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.categoria-nome {
+  padding: 0 50px;
+  margin: 15px 0 15px 0;
+  text-align: center;
+}
+
+.item {
+  text-align: center;
+  width: 200px;
+  background-color: var(--cor-primaria);
+  border-radius: 5px;
+}
+
+.item:hover {
+  background-color: #bd5b31;
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: ease-in-out 0.5s;
+  border-radius: 5px;
+}
+
+.item img {
+  width: 100%;
+  height: 260px;
+  object-fit: fill;
+  border-radius: 5px 5px 0 0;
+}
+
+.item h2 {
+  font-size: 22px;
+  font-weight: bold;
+  margin: 0;
+  min-height: 100px;
+}
+
+/* FIM DA LISTA DE FILMES E SERIES */
+
+/* Tema escuro */
+
+#check {
+  display: none;
+}
+
+.switch {
+  position: relative;
+  background-color: #000000;
+  width: 58px;
+  height: 30px;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  padding: 5px;
+  transition: all 0.5s ease-in-out;
+  cursor: pointer;
+  margin-left: 10px;
+}
+
+.slider {
+  position: absolute;
+  background-color: #555555;
+  border-radius: 50%;
+  width: 20px;
+  height: 20px;
+  transition: all 0.5s ease-in-out;
+}
+
+#check:checked ~ .switch {
+  background-color: #f0f8ff;
+}
+
+#check:checked ~ .switch .slider {
+  transform: translateX(28px);
+}
+
+.modo-claro-escuro {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.dark-mode {
+  border-color: var(--cor-primaria);
+}
+
+.dark-mode h2 {
+  color: var(--cor-letra);
+}
+
+.dark-mode p {
+  color: var(--cor-letra);
+}
+
+/* Fim do Tema escuro */
+
+/* Footer */
+
+footer {
+  background-color: var(--cor-secundaria);
+  display: flex;
+  justify-content: space-around;
+  padding: 12px;
+}
+
+.contatos-texto-titulo {
+  color: var(--cor-primaria);
+  text-align: center;
+  font-weight: bolder;
+}
+
+.plataformas {
+  display: flex;
+  flex-direction: column;
+  align-self: flex-end;
+}
+
+.dispositivos {
+  height: 57px;
+  display: flex;
+  gap: 8px;
+  padding-bottom: 15px;
+}
+
+.disponibilidade {
+  color: var(--cor-primaria);
+  text-align: center;
+  font-weight: bolder;
+}
+
+.link-contato img {
+  height: 30px;
+}
+
+/* Fim do footer */
+
+/* Botão de voltar para o topo */
+
+.back-to-top {
+  background-color: var(--cor-primaria);
+  border-radius: 65px;
+  bottom: 14px;
+  box-shadow: 2px 3px 19px -2px rgba(0, 0, 0, 0.75);
+  color: #000000;
+  cursor: pointer;
+  height: 40px;
+  position: fixed;
+  right: 22px;
+  width: 40px;
+  z-index: 3;
+
+  &::after {
+    content: "▲";
+    display: flex;
+    justify-content: center;
+    padding-left: 1px;
+    padding-top: 6px;
+  }
+}
+
+/* Fim do botão de voltar para o topo */
+
+/* Quem somos */
+
+.descricao-site {
+  padding: 80px 50px 50px 50px;
+  font-size: 18px;
+  text-align: justify;
+  font-weight: bold;
+  font-style: italic;
+}
+
+.integrantes {
+  text-align: center;
+  color: var(--cor-primaria);
+  padding-bottom: 8px;
+}
+
+.pessoas-container {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  padding: 0 50px;
+}
+
+.imagem-foto {
+  height: 205px;
+  border-radius: 50%;
+}
+
+.pessoa {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  border-radius: 103px;
+  background-color: #afabab;
+}
+
+.pessoa-lado {
+  display: flex;
+  flex-direction: column;
+}
+
+.pessoa-info {
+  font-size: 24px;
+}
+
+.pessoa-info h2 {
+  padding-top: 5px;
+}
+
+.alunos {
+  text-align: center;
+  padding-top: 50px;
+  font-style: italic;
+}
+
+hr {
+  color: #333333;
+}
+
+/* Fim Quem somos */
+
+/* Responsividade para mobile */
+@media screen and (max-width: 426px) {
+  main {
+    padding-top: 110px;
+  }
+
+  #botao-form {
+    display: none;
+  }
+
+  .pessoa {
+    flex-direction: column;
+    border-radius: 0;
+    background-color: transparent;
+  }
+
+  .imagem-foto {
+    height: 300px;
+  }
+
+  .carousel-image {
+    height: 250px;
+  }
+
+  /* tela de cadastro */
+
+  .linha {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .coluna {
+    padding: 0;
+    width: 100%;
+    margin-bottom: 12px;
+  }
+
+  .label {
+    padding: 0;
+  }
+
+  .aceitar-termos {
+    display: flex;
+    gap: 8px;
+  }
+}
+
+@media screen and (max-width: 370px) {
+  main {
+    padding-top: 140px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  #check:checked ~ .switch .slider {
+    transform: translateX(20px);
+  }
+}
+
+/*login*/
+
+.form-login-flex {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 50px;
+}
+
+.titulo-principal {
+  text-align: center;
+  font-size: 24px;
+  letter-spacing: -0.5px;
+  font-weight: 300;
+  color: #000;
+}
+
+.card-login {
+  position: relative;
+  border: 3px solid var(--cor-primaria);
+  width: 25rem;
+
+  display: flex;
+  flex-direction: column;
+  padding: 16px;
+  gap: 15px;
+  margin: 6rem 0 6.3rem 0;
+  border-radius: 6px;
+}
+
+.label {
+  font-size: 14px;
+}
+
+.card-login .label {
+  color: #000;
+}
+.recuperar-senha {
+  font-size: 12px;
+  color: var(--cor-primaria);
+  text-decoration: none;
+}
+
+.recuperar-senha:hover {
+  text-decoration: underline;
+}
+
+.entrada {
+  background-color: var(--entrada-de-dados);
+  border-radius: 5px;
+  border: 1px solid #000000;
+  height: 31.6px;
+  color: #000000;
+  padding: 10px;
+}
+
+.entrada:focus {
+  outline: 2px solid var(--cor-primaria);
+}
+
+.senha-flex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#entrar {
+  background-color: var(--cor-primaria);
+  height: 31.6px;
+  border-radius: 5px;
+  color: #ffffff;
+  font-weight: bolder;
+  border: none;
+  padding: 5px 16px;
+}
+
+#entrar:hover {
+  background-color: #ff9d00;
+  cursor: pointer;
+}
+
+.info-outros {
+  text-align: center;
+  padding: 16px;
+  font-size: 14px;
+  color: #000 !important;
+}
+
+.link {
+  color: var(--cor-primaria);
+  text-decoration: none;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
